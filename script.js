@@ -6,6 +6,14 @@ const choresListEl = document.getElementById('chores-list');
 
 let choresList = [];
 
+const choresFromLocalStorage = JSON.parse(localStorage.getItem('choresList'));
+
+if (choresFromLocalStorage) {
+  /* checks localStorage if there's data or not */
+  choresList = choresFromLocalStorage;
+  renderChores();
+}
+
 addBtnEl.addEventListener('click', function () {
   addChores();
   clearFieldValue();
@@ -20,7 +28,7 @@ function addChores() {
   let chore = inputFieldEl.value.trim();
   if (chore !== '' && !choresList.includes(chore)) {
     choresList.push(chore);
-    /* localStorage.setItem('choresList', JSON.stringify(choresList)); */
+    localStorage.setItem('choresList', JSON.stringify(choresList));
   } else if (chore === '') {
     alert('Your chores list is empty. Please write a chore');
   } else {
