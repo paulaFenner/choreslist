@@ -10,7 +10,6 @@ let choresList = []; /* Array that stores the chores added */
 const choresFromLocalStorage = JSON.parse(localStorage.getItem('choresList'));
 
 // If there are chores in local storage, load them into choresList and render them
-choresList = choresFromLocalStorage;
 if (choresFromLocalStorage) {
   choresList = choresFromLocalStorage;
   renderChores();
@@ -71,8 +70,7 @@ function renderChores() {
   // Loop through the chores list and create list items for each chore
   for (let i = 0; i < choresList.length; i++) {
     listedChore += `
-    <li 
-      id="${choresList[i]}">${choresList[i]}</li>
+    <li>${choresList[i]}</li>
     `;
   }
   // Display the list items in the choresListEl container
@@ -95,21 +93,3 @@ function deleteAllChores() {
 function renderCompletionGif() {
   choresListEl.innerHTML = '<img src="assets/wellDone.gif" alt="Friends Joey and Chandler celebrating and giving a thumbs up">';
 }
-
-/* TESTING
-console.log(choresList);
-
-
-
-function renderChores() {
-  let listedChore = '';
-  for (let i = 0; i < choresList.length; i++) {
-    listedChore += `
-    <li 
-      id="${choresList[i]}">${choresList[i]}</li>
-    `;
-  }
-  choresListEl.innerHTML = listedChore;
-}
-
-*/
