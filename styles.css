@@ -1,13 +1,22 @@
-/*
-COLOR PALETTE
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
 
-WHITE: #FEFEFE
-BLACK: #000000
-TEXT INPUT BACKGROUND: #EEEEEE
-ADD BUTTON: #FFCC68
-DELETE BUTTON: #FF9548
-CHORE: #FBDF7C
-*/
+:root {
+  --background: #ddeae1;
+  --black: #201a23;
+  --white: #fefefe;
+  --grey: #a4a4a4;
+  --grey-light: #eeeeee;
+  --accent: #fbdf7c;
+  --accent-medium: #ffcc68;
+  --accent-dark: #ff9548;
+  --accent-hover: #f9d450;
+  --accent-hover-medium: #f4b22f;
+  --accent-hover-dark: #ff9548;
+}
 
 html,
 body {
@@ -17,7 +26,7 @@ body {
   text-align: center;
   user-select: none;
   font-size: 20px;
-  background-color: #ddeae1;
+  background-color: var(--background);
 }
 
 h1 {
@@ -28,14 +37,10 @@ main {
   width: 450px;
   margin: 100px auto;
   padding: 30px;
-  background-color: #fefefe;
-  color: #000000;
-  border: 4px solid #000000;
+  background-color: var(--white);
+  color: var(--black);
+  border: 4px solid var(--black);
   border-radius: 30px;
-}
-
-.header {
-  position: relative;
 }
 
 .input-container {
@@ -47,8 +52,8 @@ main {
 input {
   padding: 15px;
   font-size: 20px;
-  background-color: #eeeeee;
-  color: #a4a4a4;
+  background-color: var(--grey-light);
+  color: var(--grey);
   border: none;
   border-radius: 10px;
   flex-grow: 1;
@@ -61,20 +66,20 @@ button {
   font-weight: 700;
   border: none;
   border-radius: 10px;
-  background-color: #ffcc68;
+  background-color: var(--accent-medium);
   cursor: pointer;
 }
 
 .btn-dark {
-  background-color: #ff9548;
+  background-color: var(--accent-dark);
 }
 /* change color */
 button:hover {
-  background-color: #f4b22f;
+  background-color: var(--accent-hover-medium);
 }
 
 .btn-dark:hover {
-  background-color: #f17c27;
+  background-color: var(--accent-hover-dark);
 }
 
 ul {
@@ -87,12 +92,12 @@ ul {
 
 ul li {
   padding: 20px;
-  background-color: #fbdf7c;
+  background-color: var(--accent);
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   cursor: pointer;
 }
 
 ul li:hover {
-  background-color: #f9d450;
+  background-color: var(--accent-hover);
 }

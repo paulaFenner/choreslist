@@ -91,5 +91,6 @@ function deleteAllChores() {
 
 // Function to render the completion GIF when all chores are completed
 function renderCompletionGif() {
-  choresListEl.innerHTML = '<img src="assets/wellDone.gif" alt="Friends Joey and Chandler celebrating and giving a thumbs up">';
+  choresListEl.innerHTML =
+    '<img src="assets/wellDone.gif" alt="Friends Joey and Chandler celebrating and giving a thumbs up">';
 }

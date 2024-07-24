@@ -6,31 +6,20 @@ This is a simple web application for managing your chores list. You can add, del
 
 ## Features
 
-- Add chores to the list
-- Delete individual chores
-- Delete all chores at once
-- Mark chores as completed and display a completion GIF
-
-## Getting Started
-
-To use the Chores List App, follow these steps:
-
-1. Clone this repository to your local machine.
-2. Open the index.html file in your web browser.
-3. Use the input field to type your chores.
-4. Click the "->" button to add the chore to the list.
-5. Click on a chore to mark it as completed and remove it from the list.
-6. Click the "X" button to clear the entire list.
+- Add new chores to the list
+- Remove chores by clicking on them
+- Clear all chores at once
+- Persistent storage using localStorage
+- Celebratory GIF display when all chores are completed
 
 ## Technologies Used
 
 - HTML
 - CSS
 - JavaScript
+- Local Storage API
 
 ## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgements
 
@@ -39,3 +28,10 @@ The completion GIF used in this project is from Giphy.
 ## Source
 
 This project is done as part of the Scrimba Bootcamp curriculum.
+
+## Future Enhancements
+
+- Add due dates for chores
+- Implement chore categories
+- Add user authentication for multiple users
+- Create a mobile app version
